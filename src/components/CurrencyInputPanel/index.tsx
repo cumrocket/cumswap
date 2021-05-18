@@ -104,6 +104,7 @@ export default function CurrencyInputPanel({
   const selectedCurrencyBalance = useCurrencyBalance(account ?? undefined, currency ?? undefined)
   const TranslateString = useI18n()
   const translatedLabel = label || TranslateString(132, 'Input')
+  console.log(currency)
   const handleDismissSearch = useCallback(() => {
     setModalOpen(false)
   }, [setModalOpen])
