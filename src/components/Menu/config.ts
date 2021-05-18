@@ -75,16 +75,20 @@ export const config: MenuEntry[] = [
         href: 'https://cumrocket.io',
       },
       {
-        label: 'Twitter',
-        href: 'https://cumrocket.io',
+        label: 'Telegram',
+        href: 'https://t.me/cumrocket',
       },
       {
-        label: 'Telegram',
-        href: 'https://cumrocket.io',
+        label: 'Discord',
+        href: 'https://discord.com/invite/cummies',
+      },
+      {
+        label: 'Twitter',
+        href: 'https://twitter.com/CumRocketCrypto',
       },
       {
         label: 'Merch',
-        href: 'https://cumrocket.io',
+        href: 'https://shop.cumrocket.io/',
       },
     ],
   },
