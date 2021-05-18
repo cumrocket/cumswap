@@ -20,7 +20,6 @@ import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
 import Container from 'components/Container'
 
-import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
 import { useActiveWeb3React } from 'hooks'
 import { useCurrency } from 'hooks/Tokens'
 import { ApprovalState, useApproveCallbackFromTrade } from 'hooks/useApproveCallback'
@@ -36,7 +35,6 @@ import Loader from 'components/Loader'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
-import V2ExchangeRedirectModal from 'components/V2ExchangeRedirectModal'
 import AppBody from '../AppBody'
 
 const StyledLink = styled(Link)`
@@ -51,10 +49,6 @@ const Swap = () => {
   const [disableSwap, setDisableSwap] = useState(false)
   const [hasPoppedModal, setHasPoppedModal] = useState(false)
   const [interruptRedirectCountdown, setInterruptRedirectCountdown] = useState(false)
-  const [onPresentV2ExchangeRedirectModal] = useModal(
-    <V2ExchangeRedirectModal handleCloseModal={() => setInterruptRedirectCountdown(true)} />
-  )
-  const onPresentV2ExchangeRedirectModalRef = useRef(onPresentV2ExchangeRedirectModal)
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),
@@ -115,30 +109,30 @@ const Swap = () => {
       // Prevent infinite re-render of modal with this condition
       if (!hasPoppedModal) {
         setHasPoppedModal(true)
-        onPresentV2ExchangeRedirectModalRef.current()
+        // onPresentV2ExchangeRedirectModalRef.current()
       }
 
       // Controls the swap buttons being disabled & renders a message
       setDisableSwap(true)
 
-      const tick = () => {
-        setModalCountdownSecondsRemaining((prevSeconds) => prevSeconds - 1)
-      }
-      const timerInterval = setInterval(() => tick(), 1000)
+      // const tick = () => {
+      //   setModalCountdownSecondsRemaining((prevSeconds) => prevSeconds - 1)
+      // }
+      // const timerInterval = setInterval(() => tick(), 1000)
+      //
+      // if (interruptRedirectCountdown) {
+      //   // Reset timer if countdown is interrupted
+      //   clearInterval(timerInterval)
+      //   setModalCountdownSecondsRemaining(5)
+      // }
 
-      if (interruptRedirectCountdown) {
-        // Reset timer if countdown is interrupted
-        clearInterval(timerInterval)
-        setModalCountdownSecondsRemaining(5)
-      }
+      // if (modalCountdownSecondsRemaining <= 0) {
+      //   window.location.href = 'https://exchange.pancakeswap.finance/#/swap'
+      // }
 
-      if (modalCountdownSecondsRemaining <= 0) {
-        window.location.href = 'https://exchange.pancakeswap.finance/#/swap'
-      }
-
-      return () => {
-        clearInterval(timerInterval)
-      }
+      // return () => {
+      //   clearInterval(timerInterval)
+      // }
     }
 
     // Unset disableSwap state if the swap inputs & outputs dont match disabledSwaps
@@ -148,7 +142,6 @@ const Swap = () => {
     currencies,
     hasPoppedModal,
     modalCountdownSecondsRemaining,
-    onPresentV2ExchangeRedirectModalRef,
     interruptRedirectCountdown,
   ])
 
@@ -352,7 +345,6 @@ const Swap = () => {
         onConfirm={handleConfirmWarning}
       />
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
-      <CardNav />
       <AppBody>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
@@ -453,12 +445,10 @@ const Swap = () => {
                         />
                       </RowBetween>
                     )}
-                    {allowedSlippage !== INITIAL_ALLOWED_SLIPPAGE && (
                       <RowBetween align="center">
                         <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
                         <Text fontSize="14px">{allowedSlippage / 100}%</Text>
                       </RowBetween>
-                    )}
                   </AutoColumn>
                 </Card>
               )}

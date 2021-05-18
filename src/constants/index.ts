@@ -14,6 +14,15 @@ export const CAKE = new Token(
   'CAKE',
   'PancakeSwap Token'
 )
+
+export const CUMMIES = new Token(
+  ChainId.MAINNET,
+  '0x27ae27110350b98d564b9a3eed31baebc82d878d',
+  18,
+  'CUMMIES',
+  'CumRocket Token'
+)
+
 export const WBNB = new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
 export const BUSD = new Token(ChainId.MAINNET, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
@@ -67,7 +76,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
-    [CAKE, WBNB],
+    [CUMMIES, WBNB],
     [BUSD, USDT],
     [DAI, USDT],
   ],
@@ -76,9 +85,9 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
 export const NetworkContextName = 'NETWORK'
 
 // default allowed slippage, in bips
-export const INITIAL_ALLOWED_SLIPPAGE = 80
+export const INITIAL_ALLOWED_SLIPPAGE = 600
 // 20 minutes, denominated in seconds
-export const DEFAULT_DEADLINE_FROM_NOW = 60 * 20
+export const DEFAULT_DEADLINE_FROM_NOW = 60 * 10
 
 // one basis point
 export const ONE_BIPS = new Percent(JSBI.BigInt(1), JSBI.BigInt(10000))

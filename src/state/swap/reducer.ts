@@ -21,7 +21,7 @@ const initialState: SwapState = {
     currencyId: '',
   },
   [Field.OUTPUT]: {
-    currencyId: '',
+    currencyId: '0x27ae27110350b98d564b9a3eed31baebc82d878d',
   },
   recipient: null,
 }

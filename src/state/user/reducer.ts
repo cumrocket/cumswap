@@ -65,7 +65,7 @@ export const initialState: UserState = {
   tokens: {},
   pairs: {},
   timestamp: currentTimestamp(),
-  audioPlay: true
+  audioPlay: false
 }
 
 export default createReducer(initialState, builder =>

@@ -1287,13 +1287,6 @@
   dependencies:
     chalk "^4.0.0"
 
-"@crowdin/crowdin-api-client@^1.8.16":
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/@crowdin/crowdin-api-client/-/crowdin-api-client-1.10.3.tgz#9be5ca4a98d507966442f41b6772d1b11c7cbed1"
-  integrity sha512-2udOZr879tDAuoJnx77OI8TCdaap4zxzcXmr0qRvxMSgOcGLUsmzGD8+OJRIqUnBJipeRPVPkSfZFDLl1NBOAg==
-  dependencies:
-    axios "^0.21.1"
-
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
