@@ -59,6 +59,15 @@ div.sc-gsxnyZ {
     min-height: 90vh;
 }
 
+.bMwoFw {
+    /*background-image: url(/images/arch-light.svg), url(/images/left-pancake.svg),url(/images/right-pancake.svg);*/
+    background-image: url("/images/cumrocket.png") !important;
+    background-repeat: no-repeat;
+    background-position: bottom !important;
+    background-size: 266px !important;
+    min-height: 90vh;
+}
+
 body {
     background: rgb(245,236,254);
     background: linear-gradient(90deg, rgba(245,236,254,1) 0%, rgba(255,198,225,1) 50%) !important;
