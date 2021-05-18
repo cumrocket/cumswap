@@ -25,5 +25,4 @@ const GlobalStyle = createGlobalStyle`
     margin-right: 8px;
   }
 `
-
 export default GlobalStyle

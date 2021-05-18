@@ -27,6 +27,9 @@ const useGetLocalProfile = () => {
             username: localProfile.username,
             image: localProfile.avatar,
           }))
+
+          console.log("THE PROFILE DATA")
+          console.log(localProfile)
         }
       } catch (error) {
         setProfile(initialState)

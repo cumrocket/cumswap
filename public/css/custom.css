@@ -1,0 +1,65 @@
+nav.sc-dkIXFM {
+    background: rgb(245,236,254);
+    background: linear-gradient(90deg, rgba(245,236,254,1) 0%, rgba(255,198,225,1) 50%) !important;
+}
+
+/*div.sc-fbNXWD {*/
+/*    background: rgb(245,236,254);*/
+/*    background: linear-gradient(90deg, rgba(245,236,254,1) 0%, rgba(255,198,225,1) 50%) !important;*/
+/*}*/
+div.sc-ctaXAZ {
+    /*background: rgb(245,236,254);*/
+    /*background: linear-gradient(90deg, rgba(245,236,254,1) 0%, rgba(255,198,225,1) 50%) !important;*/
+    background: #fcc7e0 !important;
+}
+
+div.sc-fbNXWD > * {
+    /*background: rgb(245,236,254);*/
+    background: #fcc7e0 !important;
+}
+
+div.sc-fbNXWD > * :hover {
+    /*background: rgb(245,236,254);*/
+    background: #fcb7d8 !important;
+}
+
+/*div.sc-dacFzL {*/
+/*    !*background: rgb(245,236,254);*!*/
+/*    background: #f7deea;*/
+/*}*/
+
+/*div.sc-dacFzL:hover {*/
+/*    !*background: rgb(245,236,254);*!*/
+/*    background: #f7deea;*/
+/*}*/
+
+a.sc-hOqqkJ {
+    display: none !important;
+}
+
+div.sc-euMpXR {
+    display: none !important;
+}
+
+svg.sc-bdfBwQ {
+    /*display: none !important;*/
+}
+
+div.sc-gsxnyZ {
+    display: none !important;
+}
+
+
+.fVYbIi {
+    /*background-image: url(/images/arch-light.svg), url(/images/left-pancake.svg),url(/images/right-pancake.svg);*/
+    background-image: url("/images/cumrocket.png") !important;
+    background-repeat: no-repeat;
+    background-position: bottom !important;
+    background-size: 266px !important;
+    min-height: 90vh;
+}
+
+body {
+    background: rgb(245,236,254);
+    background: linear-gradient(90deg, rgba(245,236,254,1) 0%, rgba(255,198,225,1) 50%) !important;
+}

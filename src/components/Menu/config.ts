@@ -1,6 +1,6 @@
 import { MenuEntry } from '@pancakeswap-libs/uikit'
 
-const config: MenuEntry[] = [
+export const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
@@ -29,24 +29,24 @@ const config: MenuEntry[] = [
       },
     ],
   },
-  {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: '#',
-    status: {
-      text: 'SOON',
-      color: 'warning',
-    },
-  },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: '#',
-    status: {
-      text: 'SOON',
-      color: 'warning',
-    },
-  },
+  // {
+  //   label: 'Farms',
+  //   icon: 'FarmIcon',
+  //   href: '#',
+  //   status: {
+  //     text: 'SOON',
+  //     color: 'warning',
+  //   },
+  // },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: '#',
+  //   status: {
+  //     text: 'SOON',
+  //     color: 'warning',
+  //   },
+  // },
   // {
   //   label: 'Prediction',
   //   icon: 'PredictionsIcon',
@@ -72,6 +72,14 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Website',
+        href: 'https://cumrocket.io',
+      },
+      {
+        label: 'Twitter',
+        href: 'https://cumrocket.io',
+      },
+      {
+        label: 'Telegram',
         href: 'https://cumrocket.io',
       },
       {
