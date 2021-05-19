@@ -367,6 +367,7 @@ const Swap = () => {
           <CardBody>
             <AutoColumn gap="md">
               <CurrencyInputPanel
+                
                 label={
                   independentField === Field.OUTPUT && !showWrap && trade
                     ? TranslateString(194, 'From (estimated)')
@@ -381,7 +382,7 @@ const Swap = () => {
                 otherCurrency={currencies[Field.OUTPUT]}
                 id="swap-currency-input"
               />
-              <AutoColumn justify="space-between">
+              <AutoColumn  justify="space-between">
                 <AutoRow justify={isExpertMode ? 'space-between' : 'center'} style={{ padding: '0 1rem' }}>
                   <ArrowWrapper clickable>
                     <IconButton
@@ -433,11 +434,11 @@ const Swap = () => {
               ) : null}
 
               {showWrap ? null : (
-                <Card padding=".25rem .75rem 0 .75rem" borderRadius="20px">
+                <Card padding=".25rem .75rem 0 .75rem" borderRadius="20px">                  
                   <AutoColumn gap="4px">
                     {Boolean(trade) && (
                       <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(1182, 'Price')}</Text>
+                        <Text className="sharp-semibold" fontSize="14px">{TranslateString(1182, 'Price')}</Text>
                         <TradePrice
                           price={trade?.executionPrice}
                           showInverted={showInverted}
@@ -446,8 +447,8 @@ const Swap = () => {
                       </RowBetween>
                     )}
                       <RowBetween align="center">
-                        <Text fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
-                        <Text fontSize="14px">{allowedSlippage / 100}%</Text>
+                        <Text className="sharp-semibold" fontSize="14px">{TranslateString(88, 'Slippage Tolerance')}</Text>
+                        <Text className="sharp-semibold" fontSize="14px">{allowedSlippage / 100}%</Text>
                       </RowBetween>
                   </AutoColumn>
                 </Card>
@@ -456,7 +457,7 @@ const Swap = () => {
             <BottomGrouping>
               {disableSwap && (
                 <Flex alignItems="center" justifyContent="center" mb="1rem">
-                  <Text color="failure">
+                  <Text className="sharp-semibold" color="failure">
                     Please use{' '}
                     <StyledLink external href="https://exchange.pancakeswap.finance">
                       PancakeSwap V2
@@ -474,7 +475,7 @@ const Swap = () => {
                 </Button>
               ) : noRoute && userHasSpecifiedInputOutput ? (
                 <GreyCard style={{ textAlign: 'center' }}>
-                  <Text mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Text>
+                  <Text className="sharp-semibold" mb="4px">{TranslateString(1194, 'Insufficient liquidity for this trade.')}</Text>
                 </GreyCard>
               ) : showApproveFlow ? (
                 <RowBetween>
@@ -555,9 +556,12 @@ const Swap = () => {
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
             </BottomGrouping>
           </CardBody>
+          
         </Wrapper>
+        
       </AppBody>
       <AdvancedSwapDetailsDropdown trade={trade} />
+      <div className="test">hello</div>
     </Container>
   )
 }
