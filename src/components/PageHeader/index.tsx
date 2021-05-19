@@ -34,6 +34,7 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
             <Text color="textSubtle" fontSize="14px">
               {description}
             </Text>
+            
           )}
         </Details>
         <IconButton variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
