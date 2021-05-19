@@ -37,7 +37,7 @@ div.sc-gsxnyZ {
 
 .fVYbIi {
     /*background-image: url(/images/arch-light.svg), url(/images/left-pancake.svg),url(/images/right-pancake.svg);*/
-    background-image: url("/images/cumrocket.png") !important;
+    background-image: url("/images/cumrocket_logo_long.svg") !important;
     background-repeat: no-repeat;
     background-position: bottom !important;
     background-size: 266px !important;
@@ -46,7 +46,7 @@ div.sc-gsxnyZ {
 
 .bMwoFw {
     /*background-image: url(/images/arch-light.svg), url(/images/left-pancake.svg),url(/images/right-pancake.svg);*/
-    background-image: url("/images/cumrocket.png") !important;
+    background-image: url("/images/cumrocket_logo_long.svg") !important;
     background-repeat: no-repeat;
     background-position: bottom !important;
     background-size: 266px !important;
@@ -60,8 +60,6 @@ body {
     background-size: cover;
     
 }
-
-
 
 
 .btn-primary, .gnkXzi {
