@@ -122,7 +122,7 @@ const LayoutHeader: React.FC<NavProps> = ({
           <UserBlock account={account} login={login} logout={logout} />
         </Flex>
       </StyledNav>
-      <BodyWrapper>
+      <BodyWrapper >
         <Inner isPushed={isPushed} showMenu={showMenu}>
           {children}
         </Inner>

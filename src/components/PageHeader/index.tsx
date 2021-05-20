@@ -22,7 +22,7 @@ const Details = styled.div`
 
 const IconButtonStyled = styled(IconButton)`
   svg {
-    fill: #e2659d;
+    fill: #32325D;
   }
 `
 
@@ -32,12 +32,12 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
 
   return (
-    <StyledPageHeader>
+    <StyledPageHeader >
       <Flex alignItems="center">
         <Details>
           <Heading className="sharp-bold" mb="8px">{title}</Heading>
           {description && (
-            <Text color="#e3649b" fontSize="14px">
+            <Text className="sharp-semibold" fontSize="14px">
               {description}
             </Text>
             

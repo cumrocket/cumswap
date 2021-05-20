@@ -110,7 +110,7 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
   return (
     <InputPanel id={id}>
-      <Container className="test" hideInput={hideInput}>
+      <Container className="panel-styling" hideInput={hideInput}>
         {!hideInput && (
           <LabelRow>
             <RowBetween>
