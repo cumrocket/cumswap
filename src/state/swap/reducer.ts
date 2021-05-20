@@ -14,6 +14,7 @@ export interface SwapState {
   readonly recipient: string | null
 }
 
+// INITIAL STATE GETS CLEARED IN createReducer BELOW
 const initialState: SwapState = {
   independentField: Field.INPUT,
   typedValue: '',
@@ -33,10 +34,10 @@ export default createReducer<SwapState>(initialState, (builder) =>
       (state, { payload: { typedValue, recipient, field, inputCurrencyId, outputCurrencyId } }) => {
         return {
           [Field.INPUT]: {
-            currencyId: inputCurrencyId,
+            currencyId: inputCurrencyId || "BNB",
           },
           [Field.OUTPUT]: {
-            currencyId: outputCurrencyId,
+            currencyId: outputCurrencyId || "0x27ae27110350b98d564b9a3eed31baebc82d878d",
           },
           independentField: field,
           typedValue,
