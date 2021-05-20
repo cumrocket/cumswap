@@ -110,11 +110,11 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
   return (
     <InputPanel id={id}>
-      <Container hideInput={hideInput}>
+      <Container className="test" hideInput={hideInput}>
         {!hideInput && (
           <LabelRow>
             <RowBetween>
-              <Text fontSize="14px">{translatedLabel}</Text>
+              <Text className="sharp-bold" fontSize="14px">{translatedLabel}</Text>
               {account && (
                 <Text onClick={onMax} fontSize="14px" style={{ display: 'inline', cursor: 'pointer' }}>
                   {!hideBalance && !!currency && selectedCurrencyBalance
@@ -129,7 +129,7 @@ export default function CurrencyInputPanel({
           {!hideInput && (
             <>
               <NumericalInput
-                className="token-amount-input"
+                className="token-amount-input sharp-bold"
                 value={value}
                 onUserInput={(val) => {
                   onUserInput(val)
@@ -162,7 +162,7 @@ export default function CurrencyInputPanel({
                   {pair?.token0.symbol}:{pair?.token1.symbol}
                 </Text>
               ) : (
-                <Text id="pair">
+                <Text id="pair" className="sharp-bold">
                   {(currency && currency.symbol && currency.symbol.length > 20
                     ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
                         currency.symbol.length - 5,

@@ -35,11 +35,12 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
     <StyledPageHeader>
       <Flex alignItems="center">
         <Details>
-          <Heading mb="8px">{title}</Heading>
+          <Heading className="sharp-bold" mb="8px">{title}</Heading>
           {description && (
             <Text color="#e3649b" fontSize="14px">
               {description}
             </Text>
+            
           )}
         </Details>
         <IconButtonStyled variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
