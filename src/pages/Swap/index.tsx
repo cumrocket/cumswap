@@ -561,7 +561,6 @@ const Swap = () => {
         
       </AppBody>
       <AdvancedSwapDetailsDropdown trade={trade} />
-      <div className="test">hello</div>
     </Container>
   )
 }
