@@ -16,8 +16,8 @@ import { RedirectPathToSwapOnly } from './Swap/redirects'
 import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
+import Menu from '../components/Menu';
 
-import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
 const AppWrapper = styled.div`
@@ -25,9 +25,11 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
+  width: 100%;
 `
 
 const BodyWrapper = styled.div`
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
