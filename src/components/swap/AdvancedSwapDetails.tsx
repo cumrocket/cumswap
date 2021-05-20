@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components';
 import { Trade, TradeType } from '@pancakeswap-libs/sdk'
 import { Card, CardBody, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
@@ -12,6 +13,10 @@ import FormattedPriceImpact from './FormattedPriceImpact'
 import { SectionBreak } from './styleds'
 import SwapRoute from './SwapRoute'
 
+const CardStyled = styled(Card)`
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+`
+
 function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippage: number }) {
   const { priceImpactWithoutFee, realizedLPFee } = computeTradePriceBreakdown(trade)
   const isExactIn = trade.tradeType === TradeType.EXACT_INPUT
@@ -19,7 +24,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
   const TranslateString = useI18n()
 
   return (
-    <Card>
+    <CardStyled>
       <CardBody>
         <RowBetween>
           <RowFixed>
@@ -71,7 +76,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
           </Text>
         </RowBetween>
       </CardBody>
-    </Card>
+    </CardStyled>
   )
 }
 

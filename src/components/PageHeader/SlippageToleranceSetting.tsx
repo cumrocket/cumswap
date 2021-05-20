@@ -76,7 +76,7 @@ const SlippageToleranceSettings = ({ translateString }: SlippageToleranceSetting
   return (
     <Box mb="16px">
       <Flex alignItems="center" mb="8px">
-        <Text bold>{translateString(88, 'Slippage tolerance')}</Text>
+        <Text className="sharp-bold" bold>{translateString(88, 'Slippage tolerance')}</Text>
         <QuestionHelper
           text={translateString(
             186,
@@ -84,14 +84,14 @@ const SlippageToleranceSettings = ({ translateString }: SlippageToleranceSetting
           )}
         />
       </Flex>
-      <Options>
-        <Flex mb={['8px', '8px', 0]} mr={[0, 0, '8px']}>
+      <Options >
+        <Flex  mb={['8px', '8px', 0]} mr={[0, 0, '8px']}>
           {predefinedValues.map(({ label, value: predefinedValue }) => {
             const handleClick = () => setValue(predefinedValue)
 
             return (
               <Option key={predefinedValue}>
-                <Button variant={value === predefinedValue ? 'primary' : 'tertiary'} onClick={handleClick}>
+                <Button className="panel-styling tol-numb" variant={value === predefinedValue ? 'primary' : 'tertiary'} onClick={handleClick}>
                   {label}
                 </Button>
               </Option>
@@ -101,6 +101,7 @@ const SlippageToleranceSettings = ({ translateString }: SlippageToleranceSetting
         <Flex alignItems="center">
           <Option>
             <Input
+              className="panel-styling sharp-bold"
               type="number"
               scale="lg"
               step={0.1}

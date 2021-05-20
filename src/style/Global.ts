@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
+// background-color: ${({ theme }) => theme.colors.background};
+
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: ${({ theme }) => theme.colors.background};
+    background-image: url('/images/bg.jpg')
 
     img {
       height: auto;

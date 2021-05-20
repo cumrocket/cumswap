@@ -110,7 +110,7 @@ export default function CurrencyInputPanel({
   }, [setModalOpen])
   return (
     <InputPanel id={id}>
-      <Container className="test" hideInput={hideInput}>
+      <Container className="panel-styling" hideInput={hideInput}>
         {!hideInput && (
           <LabelRow>
             <RowBetween>
@@ -136,7 +136,7 @@ export default function CurrencyInputPanel({
                 }}
               />
               {account && currency && showMaxButton && label !== 'To' && (
-                <Button onClick={onMax} scale="sm" className="sharp-bold" variant="text">
+                <Button onClick={onMax} scale="sm" variant="text" style={{ color: '#de4b8d' }}>
                   MAX
                 </Button>
               )}

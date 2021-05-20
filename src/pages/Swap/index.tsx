@@ -1,14 +1,13 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
-import React, { useCallback, useContext, useEffect, useMemo, useState, useRef } from 'react'
+import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text, useModal, Link, Flex } from '@pancakeswap-libs/uikit'
+import { CardBody, ArrowDownIcon, Button, IconButton, Text, Link, Flex } from '@pancakeswap-libs/uikit'
 import styled, { ThemeContext } from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import ConfirmSwapModal from 'components/swap/ConfirmSwapModal'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
-import CardNav from 'components/CardNav'
 import { AutoRow, RowBetween } from 'components/Row'
 import AdvancedSwapDetailsDropdown from 'components/swap/AdvancedSwapDetailsDropdown'
 import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWithoutFee'
@@ -40,6 +39,25 @@ import AppBody from '../AppBody'
 const StyledLink = styled(Link)`
   display: inline;
   color: ${({ theme }) => theme.colors.failure};
+`;
+
+const FooterNav = styled.ul`
+  display: flex;
+  flex-direction: row;
+`
+
+const FooterNavItem = styled.div`
+  padding: 1rem 0.8rem;
+  font-size: 14px;
+`
+
+
+const FooterNavItemLink = styled.a`
+  color: #e2659d;
+
+  &:hover {
+    color: #d4558e;
+  }
 `
 
 const Swap = () => {
@@ -561,6 +579,16 @@ const Swap = () => {
         
       </AppBody>
       <AdvancedSwapDetailsDropdown trade={trade} />
+      <div className="footer-wrap">
+        <FooterNav>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://cumrocket.io/" target="_blank">Website</FooterNavItemLink></FooterNavItem>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://t.me/cumrocket" target="_blank">Telegram</FooterNavItemLink></FooterNavItem>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://discord.com/invite/cummies" target="_blank">Discord</FooterNavItemLink></FooterNavItem>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://twitter.com/CumRocketCrypto" target="_blank">Twitter</FooterNavItemLink></FooterNavItem>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://shop.cumrocket.io/" target="_blank">Merch</FooterNavItemLink></FooterNavItem>
+        </FooterNav>
+        <img className="footer-logo" alt="CumRocket" src="/images/cumrocket_logo_long.svg" />
+      </div>
     </Container>
   )
 }
