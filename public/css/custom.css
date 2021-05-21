@@ -93,10 +93,14 @@ body {
 }
 
 @media (max-width: 400px)  {
-    .footer-wrap {
+    /* .footer-wrap {
         align-items: center;
         display: flex;
         flex-direction: column !important;
+    } */
+
+    .footer-link {
+        font-size: 12px !important;
     }
 }
 
@@ -109,7 +113,7 @@ body {
 
 @media (max-width: 756px)  {
     .nav-logo{
-        width: 180px !important ;
+        width: 187px !important ;
         margin-left: 8px;
     }
 }
