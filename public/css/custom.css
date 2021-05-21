@@ -69,7 +69,11 @@ body {
     background-color: #32325D !important;
     font-family: "SharpSans-Bold" !important;
     box-shadow: 0px 5px 35px rgba(49, 7, 23, 0.1) !important;
+    font-size: 14px !important;
 }
+
+
+
 
 .panel-styling {
     box-shadow: none !important;
@@ -96,11 +100,16 @@ body {
 
 
 
-
+@media (max-width: 756px)  {
+    .nav-logo{
+        width: 180px !important ;
+        margin-left: 8px;
+    }
+}
 
 .nav-logo{
-    width: 230px !important ;
-    margin-right: 24px !important;
+    width: 280px ;
+    
 }
 
 .model-glow {

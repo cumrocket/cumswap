@@ -31,7 +31,7 @@ const Logo: React.FC<Props> = ({ href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <img className="desktop-icon nav-logo" alt="CumRocket" src="/images/cumswap_logo_cumrocket.svg" />
+      <img className=" nav-logo" alt="CumRocket" src="/images/cumswap_logo_cumrocket.svg" />
     </>
   );
 
