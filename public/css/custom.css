@@ -95,8 +95,12 @@ body {
 }
 
 
+
+
+
 .nav-logo{
-    width: 280px !important;
+    width: 230px !important ;
+    margin-right: 24px !important;
 }
 
 .model-glow {
