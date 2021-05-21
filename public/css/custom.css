@@ -90,7 +90,14 @@ body {
 .footer-wrap {
     align-items: center;
     display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 400px)  {
+    .footer-wrap {
+        align-items: center;
+        display: flex;
+        flex-direction: column !important;
+    }
 }
 
 .tol-numb {

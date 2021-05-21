@@ -579,8 +579,8 @@ const Swap = () => {
         
       </AppBody>
       <AdvancedSwapDetailsDropdown trade={trade} />
-      <div className="footer-wrap">
-        <FooterNav>
+      
+        <FooterNav className="footer-wrap">
           <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://cumrocket.io/" target="_blank">Website</FooterNavItemLink></FooterNavItem>
           <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://t.me/cumrocket" target="_blank">Telegram</FooterNavItemLink></FooterNavItem>
           <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://discord.com/invite/cummies" target="_blank">Discord</FooterNavItemLink></FooterNavItem>
@@ -588,7 +588,7 @@ const Swap = () => {
           <FooterNavItem><FooterNavItemLink className="sharp-bold" href="https://shop.cumrocket.io/" target="_blank">Merch</FooterNavItemLink></FooterNavItem>
         </FooterNav>
         <img className="footer-logo" alt="CumRocket" src="/images/cumrocket_logo_long.svg" />
-      </div>
+      
     </Container>
   )
 }
