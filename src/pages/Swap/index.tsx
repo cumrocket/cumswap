@@ -585,7 +585,7 @@ const Swap = () => {
           <FooterNavItem><FooterNavItemLink className="sharp-bold footer-link" href="https://t.me/cumrocket" target="_blank">Telegram</FooterNavItemLink></FooterNavItem>
           <FooterNavItem><FooterNavItemLink className="sharp-bold footer-link" href="https://discord.com/invite/cummies" target="_blank">Discord</FooterNavItemLink></FooterNavItem>
           <FooterNavItem><FooterNavItemLink className="sharp-bold footer-link" href="https://twitter.com/CumRocketCrypto" target="_blank">Twitter</FooterNavItemLink></FooterNavItem>
-          <FooterNavItem><FooterNavItemLink className="sharp-bold footer-link" href="https://shop.cumrocket.io/" target="_blank">Merch</FooterNavItemLink></FooterNavItem>
+          <FooterNavItem><FooterNavItemLink className="sharp-bold footer-link" href="https://poocoin.app/tokens/0x27ae27110350b98d564b9a3eed31baebc82d878d" target="_blank">Chart</FooterNavItemLink></FooterNavItem>
         </FooterNav>
         <img className="footer-logo" alt="CumRocket" src="/images/cumrocket_logo_long.svg" />
       
