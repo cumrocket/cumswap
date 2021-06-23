@@ -7,7 +7,7 @@
     "@binance-chain/bsc-connector": "^1.0.0",
     "@ethersproject/experimental": "^5.0.1",
     "@pancakeswap-libs/sdk": "1.0.1",
-    "@pancakeswap-libs/uikit": "^0.27.1",
+    "@pancakeswap-libs/uikit": "https://github.com/cumrocket/pancake-libs-uikit",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
