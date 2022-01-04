@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components';
 import { Trade, TradeType } from '@pancakeswap-libs/sdk'
 import { Card, CardBody, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
@@ -12,6 +13,10 @@ import FormattedPriceImpact from './FormattedPriceImpact'
 import { SectionBreak } from './styleds'
 import SwapRoute from './SwapRoute'
 
+const CardStyled = styled(Card)`
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+`
+
 function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippage: number }) {
   const { priceImpactWithoutFee, realizedLPFee } = computeTradePriceBreakdown(trade)
   const isExactIn = trade.tradeType === TradeType.EXACT_INPUT
@@ -19,11 +24,11 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
   const TranslateString = useI18n()
 
   return (
-    <Card>
+    <CardStyled>
       <CardBody>
         <RowBetween>
           <RowFixed>
-            <Text fontSize="14px">
+            <Text className="sharp-bold" fontSize="14px">
               {isExactIn ? TranslateString(1210, 'Minimum received') : TranslateString(220, 'Maximum sold')}
             </Text>
             <QuestionHelper
@@ -34,7 +39,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             />
           </RowFixed>
           <RowFixed>
-            <Text fontSize="14px">
+            <Text className="sharp-semibold" fontSize="14px">
               {isExactIn
                 ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol}` ??
                   '-'
@@ -45,7 +50,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
         </RowBetween>
         <RowBetween>
           <RowFixed>
-            <Text fontSize='14px'>{TranslateString(226, 'Price Impact')}</Text>
+            <Text className="sharp-bold" fontSize='14px'>{TranslateString(226, 'Price Impact')}</Text>
             <QuestionHelper
               text={TranslateString(
                 224,
@@ -53,12 +58,12 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
               )}
             />
           </RowFixed>
-          <FormattedPriceImpact priceImpact={priceImpactWithoutFee} />
+          <FormattedPriceImpact  priceImpact={priceImpactWithoutFee} />
         </RowBetween>
 
         <RowBetween>
           <RowFixed>
-            <Text fontSize="14px">{TranslateString(228, 'Liquidity Provider Fee')}</Text>
+            <Text className="sharp-bold" fontSize="14px">{TranslateString(228, 'Liquidity Provider Fee')}</Text>
             <QuestionHelper
               text={TranslateString(
                 230,
@@ -66,12 +71,12 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
               )}
             />
           </RowFixed>
-          <Text fontSize="14px">
+          <Text className="sharp-semibold" fontSize="14px">
             {realizedLPFee ? `${realizedLPFee.toSignificant(4)} ${trade.inputAmount.currency.symbol}` : '-'}
           </Text>
         </RowBetween>
       </CardBody>
-    </Card>
+    </CardStyled>
   )
 }
 
@@ -93,7 +98,7 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
             <>
               <SectionBreak />
               <AutoColumn style={{ padding: '0 24px' }}>
-                <RowFixed>
+                {/* <RowFixed>
                   <Text fontSize="14px">Route</Text>
                   <QuestionHelper
                     text={TranslateString(
@@ -101,8 +106,8 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
                       'Routing through these tokens resulted in the best price for your trade.'
                     )}
                   />
-                </RowFixed>
-                <SwapRoute trade={trade} />
+                </RowFixed> */}
+                {/* <SwapRoute trade={trade} /> */}
               </AutoColumn>
             </>
           )}

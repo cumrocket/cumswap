@@ -20,33 +20,39 @@ const Details = styled.div`
   flex: 1;
 `
 
+const IconButtonStyled = styled(IconButton)`
+  svg {
+    fill: #32325D;
+  }
+`
+
 const PageHeader = ({ title, description, children }: PageHeaderProps) => {
   const TranslateString = useI18n()
   const [onPresentSettings] = useModal(<SettingsModal translateString={TranslateString} />)
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
 
   return (
-    <StyledPageHeader>
+    <StyledPageHeader >
       <Flex alignItems="center">
         <Details>
           <Heading className="sharp-bold" mb="8px">{title}</Heading>
           {description && (
-            <Text className="sharp-semibold" color="textSubtle" fontSize="14px">
+            <Text className="sharp-semibold" fontSize="14px">
               {description}
             </Text>
             
           )}
         </Details>
-        <IconButton  variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
-          <TuneIcon className="fill-navy" width="24px"/>
-        </IconButton>
-        <IconButton
+        <IconButtonStyled variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
+          <TuneIcon width="24px" color="currentColor" />
+        </IconButtonStyled>
+        <IconButtonStyled
           variant="text"
           onClick={onPresentRecentTransactions}
           title={TranslateString(1202, 'Recent transactions')}
         >
-          <HistoryIcon className="fill-navy" width="24px" />
-        </IconButton>
+          <HistoryIcon width="24px" color="currentColor" />
+        </IconButtonStyled>
       </Flex>
       {children && <Text mt="16px">{children}</Text>}
     </StyledPageHeader>

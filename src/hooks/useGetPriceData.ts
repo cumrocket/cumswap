@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
+import { CUMMIES } from '../constants'
 
 type ApiResponse = {
-  updated_at: string
+  updated_at: number
   data: {
-    [key: string]: {
-      name: string
-      symbol: string
-      price: string
-      price_BNB: string
-    }
+    name: string
+    symbol: string
+    price: string
+    price_BNB: string
   }
 }
 
-const api = 'https://api.pancakeswap.info/api/tokens'
+// const api = 'https://api.pancakeswap.info/api/tokens'
+const api = `https://api.pancakeswap.info/api/v2/tokens/${CUMMIES.address}`;
 
 const useGetPriceData = () => {
   const [data, setData] = useState<ApiResponse | null>(null)
